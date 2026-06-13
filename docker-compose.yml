@@ -25,6 +25,8 @@ services:
 
   app:
     build: .
+    environment:
+      - TZ=${TZ:-UTC}
     command: bash start.sh
     restart: unless-stopped
     volumes:
